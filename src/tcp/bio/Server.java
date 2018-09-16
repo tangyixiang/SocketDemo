@@ -1,4 +1,4 @@
-package bio;
+package tcp.bio;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -14,7 +14,7 @@ public class Server {
             while (true){
                 Socket socket = server.accept();
                 System.out.println("服务器启动");
-                Thread t = new Thread(new BlockingThread(socket), "服务器");
+                Thread t = new Thread(new tcp.bio.BlockingThread(socket), "服务器");
                 t.start();
 
             }

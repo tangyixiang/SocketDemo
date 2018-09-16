@@ -1,4 +1,4 @@
-package nio;
+package tcp.nio;
 
 public class ChatServer {
 }

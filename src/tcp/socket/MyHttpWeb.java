@@ -1,7 +1,4 @@
-package socket;
-
-import bio.Server;
-import jdk.nashorn.internal.parser.Token;
+package tcp.socket;
 
 import java.io.*;
 import java.net.Socket;
@@ -48,7 +45,7 @@ public class MyHttpWeb {
             StringBuilder requestMessage = new StringBuilder();
             int c ;
             while ((c = in.read()) != -1){
-                if( c == '\r' || c == '\n' || c == -1 )
+                if( c == '\r' || c == '\n' )
                     break;
                 requestMessage.append((char) c);
             }
